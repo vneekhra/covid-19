@@ -51,15 +51,9 @@ app.get('', (req, res) => {
 
 app.get('/country', (req, res) => {
 
-    if (!req.query.search) {
-        return res.send ({
-            error: 'You must provide a search term'
-        })
-    }
-
-    console.log(req.query)
-    res.send({
-        products: []
+    res.render('country', {
+        title: 'COVID-19 Updates',
+        name: 'Xcel Cloud Containers Team!'
     })
 })
 
@@ -74,7 +68,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         helpText: 'Help pages.....',
         title: 'COVID-19 Updates',
-        name: 'Xcel Cloud Containers Team!'
+        name: 'Help page'
     })
 })
 

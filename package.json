@@ -1,7 +1,6 @@
 {
   "name": "covid-19",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
@@ -14,9 +13,12 @@
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.0",
+    "joi": "^14.3.1",
+    "node-fetch": "^2.6.0",
     "request": "^2.88.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "description": ""
 }
