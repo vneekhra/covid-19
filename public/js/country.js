@@ -12,7 +12,8 @@ window.addEventListener('load', (e) => {
     fetch('https://api.covid19api.com/summary').then((response) => {
         response.json().then((data) => {
             //console.log(data)
-			const objCountry=data["Countries"].find(c => c.Country === "India");
+            const objCountry=data["Countries"].find(c => c.Country === "India");
+            //console.log(objCountry);
             if (data.error) {
                 //message1.textContent = data.error
                 message2.textContent = ''
@@ -21,7 +22,11 @@ window.addEventListener('load', (e) => {
 					opt = document.createElement('option')
 					opt.appendChild( document.createTextNode(Country) )
 					opt.value = Country
-					countryinput.appendChild(opt)
+                    countryinput.appendChild(opt)
+                    console.log(Country + " has " + TotalConfirmed + " cases");
+
+                    
+
 				});
 				countryinput.value="India"
                 message2.textContent =  objCountry.TotalConfirmed

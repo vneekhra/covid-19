@@ -5,11 +5,11 @@ const covid = (address, callback) => {
     const url = 'https://api.covid19api.com/summary'
 
     request({url, json: true}, (error, {body}) => {
-        //console.log(body)
+        console.log(body)
         if (error) {
             callback('Unable to connect to location services!', undefined)
         } else if (body.features.length === 0) {
-            //console.log(response)
+            console.log(response)
             callback('Unable to find location. Try another address', undefined)
         } else {
             callback(undefined, {
