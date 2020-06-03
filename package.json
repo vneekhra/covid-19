@@ -16,7 +16,11 @@
     "hbs": "^4.1.1",
     "joi": "^14.3.1",
     "node-fetch": "^2.6.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "body-parser": "^1.18.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.9.15"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"

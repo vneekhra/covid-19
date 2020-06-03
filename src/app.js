@@ -20,6 +20,20 @@ hbs.registerPartials(partialsPath)
 // Setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
+// MongoDB Changes
+require('../models/db');
+const Handlebars = require('handlebars')
+const exphbs = require('express-handlebars');
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
+var bodyParser = require('body-parser')
+
+const employeeController = require('../controllers/employeeController');
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
+app.use('/employee', employeeController);
+
 app.get('', (req, res) => {
     res.render('index', {
         title: 'COVID-19 Updates',
